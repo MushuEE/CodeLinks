@@ -17,7 +17,13 @@ export function activate(context: vscode.ExtensionContext) {
 		// The code you place here will be executed every time your command is executed
 
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from codelink!');
+		const activeEditor = vscode.window.activeTextEditor;
+		if (activeEditor) {
+			let line = activeEditor.selection.active.line;
+			let folderPath = activeEditor.document.fileName;
+			vscode.window.showInformationMessage("Hello World from codelink! " + line +":"+vscode.workspace.getWorkspaceFolder(activeEditor.document.uri)?.name + ":" + activeEditor.document.uri);
+			// vscode.commands.executeCommand('vscode.open', vscode.Uri.parse('http://www.pinkbike.com/news/fail-of-the-month-june-2016.html'));
+		}
 	});
 
 	context.subscriptions.push(disposable);
