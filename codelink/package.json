@@ -17,9 +17,20 @@
 		"commands": [
 			{
 				"command": "codelink.helloWorld",
-				"title": "Hello World"
-			}
-		]
+				"title": "Open in CS"			}
+		],
+		"menus": {
+			"editor/context": [{
+				"when": "editorHasSelection",
+				"command": "codelink.helloWorld",
+				"group": "codelink"
+		  },
+		  {
+			"command": "codelink.helloWorld",
+			"group": "codelink@1",
+			"when": "true"
+		}]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
