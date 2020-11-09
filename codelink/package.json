@@ -10,23 +10,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:codelink.helloWorld"
+		"onCommand:codelink.OpenInCs"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "codelink.helloWorld",
+				"command": "codelink.OpenInCs",
 				"title": "Open in CS"			}
 		],
 		"menus": {
 			"editor/context": [{
 				"when": "editorHasSelection",
-				"command": "codelink.helloWorld",
+				"command": "codelink.OpenInCs",
 				"group": "codelink"
 		  },
 		  {
-			"command": "codelink.helloWorld",
+			"command": "codelink.OpenInCs",
 			"group": "codelink@1",
 			"when": "true"
 		}]
