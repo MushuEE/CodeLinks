@@ -30,6 +30,22 @@
 			"group": "codelink@1",
 			"when": "true"
 		}]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "CodeLink Replacements",
+			"properties": {
+			  "codelink.stripRegex": {
+				"type": ["string", "null"],
+				"default": null,
+				"description": "Path regex to strip out of local path"
+			  },
+			  "codelink.uriRegex": {
+				"type": ["string", "null"],
+				"default": null,
+				"description": "Uri to extend with the path"
+			  }
+			}
 		}
 	},
 	"scripts": {
